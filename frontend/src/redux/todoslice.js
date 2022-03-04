@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const getTodosAsync = createAsyncThunk(
   "todos/getTodosAsync",
   async () => {
-    const res = await fetch("http://localhost:3001");
+    const res = await fetch("https://todooze.herokuapp.com/");
     if (res.ok) {
       const { todos } = await res.json();
       return todos;
@@ -16,7 +16,7 @@ export const getTodosAsync = createAsyncThunk(
 export const addTodoAsync = createAsyncThunk(
   "todos/addTodoAsync",
   async (payload) => {
-    const res = await fetch("http://localhost:3001", {
+    const res = await fetch("https://todooze.herokuapp.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export const addTodoAsync = createAsyncThunk(
 export const deleteTodoAsync = createAsyncThunk(
   "todos/deleteTodoAsync",
   async (payload) => {
-    const res = await fetch("http://localhost:3001", {
+    const res = await fetch("https://todooze.herokuapp.com/", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export const deleteTodoAsync = createAsyncThunk(
 export const updateTodoAsync = createAsyncThunk(
   "todos/updateTodoAsync",
   async (payload) => {
-    const res = await fetch("http://localhost:3001", {
+    const res = await fetch("https://todooze.herokuapp.com/", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
