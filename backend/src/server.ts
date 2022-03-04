@@ -25,7 +25,7 @@ mongoose.connect(URI, options).then(() => console.log("Database connected..."));
 
 /** Server */
 const httpServer = http.createServer(router);
-const PORT: string = "3001";
+const PORT: string = process.env.PORT || "3001";
 httpServer.listen(PORT, () =>
   console.log(`Server running on http://localhost:${PORT}`)
 );
