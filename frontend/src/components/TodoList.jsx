@@ -14,7 +14,7 @@ const TodoList = () => {
     <>
       {todos.length === 0 ? (
         <div className="flex items-center justify-center mt-10">
-          <span className="p-3 text-xs font-semibold text-green-500 uppercase bg-green-400/20">
+          <span className="p-3 font-semibold text-md text-amber-500 bg-amber-300/20">
             There are no Todos. Please add some by using the field below.
           </span>
         </div>

@@ -26,13 +26,13 @@ const AddTodoForm = () => {
       )}
       <div className="flex justify-center gap-4 ">
         <input
-          className="w-full p-2 text-white rounded-md bg-slate-700 sm:w-72"
+          className="w-full p-2 text-white rounded-md bg-stone-700 sm:w-72"
           placeholder="Enter a Todo..."
           {...register("title", { required: "Please enter a Todo" })}
         />
         <button
           onClick={handleSubmit(submitTodo)}
-          className="px-2 py-1 text-white rounded-md bg-slate-900 hover:bg-slate-700 active:scale-110"
+          className="px-2 py-1 text-white rounded-md bg-stone-900 hover:bg-stone-700 active:scale-110"
         >
           Add Todo
         </button>
