@@ -1,4 +1,3 @@
-import React from "react";
 import { FaTrash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { deleteTodoAsync, updateTodoAsync } from "../redux/todoslice";
@@ -10,10 +9,10 @@ const TodoItem = ({ todo }) => {
   };
 
   return (
-    <div className="flex justify-between items-center px-2 py-4 border-b ">
-      <div className="flex gap-3 items-center text-white">
+    <div className="flex items-center justify-between px-2 py-4 border-b ">
+      <div className="flex items-center gap-3 text-white">
         <input
-          className="bg-slate-900"
+          className="bg-slate-900 hover:cursor-pointer"
           type="checkbox"
           checked={todo.completed}
           onChange={completeTodo}
@@ -30,7 +29,7 @@ const TodoItem = ({ todo }) => {
         onClick={() => {
           dispatch(deleteTodoAsync(todo._id));
         }}
-        className=" hover:scale-110 transition text-white "
+        className="text-white transition hover:scale-110 hover:cursor-pointer"
       />
     </div>
   );
